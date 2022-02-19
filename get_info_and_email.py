@@ -45,7 +45,7 @@ def item_info(item):
     if itemName:
         itemName = itemName.text
         # If item is one the user is looking for
-        if find_zodiac_ebay(itemName):
+        if find_item_ebay(itemName):
             # Gather info on item
             itemInfo = {}
             itemInfo["name"] = itemName
@@ -115,7 +115,7 @@ def replace(priceList):
     return priceList
 
 
-def find_zodiac_ebay(item):
+def find_item_ebay(item):
     """
     Returns True if one or more keywords is in item name, else False.
     """
